@@ -1,0 +1,11 @@
+{
+  "name": "rescuetime",
+  "version": "0.2.0",
+  "description": "Understand tracked time and explicitly control RescueTime focus sessions and timers.",
+  "author": {
+    "name": "RescueTime",
+    "url": "https://www.rescuetime.com/"
+  },
+  "homepage": "https://www.rescuetime.com/mcp-guide",
+  "mcpServers": "./.mcp.json"
+}
