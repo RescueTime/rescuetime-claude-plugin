@@ -1,6 +1,6 @@
 {
   "name": "rescuetime",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Understand tracked time and explicitly control RescueTime focus sessions and timers.",
   "author": {
     "name": "RescueTime",
