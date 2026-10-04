@@ -1,0 +1,19 @@
+{
+  "name": "rescuetime",
+  "owner": {
+    "name": "RescueTime",
+    "url": "https://www.rescuetime.com/"
+  },
+  "metadata": {
+    "description": "Official RescueTime integration for Claude"
+  },
+  "plugins": [
+    {
+      "name": "rescuetime",
+      "source": "./",
+      "description": "Analyze tracked time, project work, productivity patterns, and explicitly requested focus sessions.",
+      "version": "0.3.1",
+      "category": "productivity"
+    }
+  ]
+}

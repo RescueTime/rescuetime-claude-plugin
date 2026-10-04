@@ -1,12 +1,28 @@
 {
   "name": "rescuetime",
-  "version": "0.3.0",
-  "description": "Understand tracked time and explicitly control RescueTime focus sessions and timers.",
+  "version": "0.3.1",
+  "displayName": "RescueTime",
+  "description": "Analyze tracked time, project work, productivity patterns, and explicitly requested focus sessions.",
   "author": {
     "name": "RescueTime",
     "url": "https://www.rescuetime.com/"
   },
   "homepage": "https://www.rescuetime.com/mcp-guide",
+  "repository": "https://github.com/RescueTime/rescuetime-claude-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "time tracking",
+    "activity tracking",
+    "productivity",
+    "timesheets",
+    "project time",
+    "focus sessions",
+    "work-life balance"
+  ],
+  "icon": "./.claude-plugin/icon.svg",
+  "documentationUrl": "https://www.rescuetime.com/mcp-guide",
+  "supportUrl": "https://help.rescuetime.com/",
   "privacyPolicyUrl": "https://www.rescuetime.com/privacy",
+  "termsOfServiceUrl": "https://www.rescuetime.com/tos",
   "mcpServers": "./.mcp.json"
 }

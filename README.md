@@ -1,68 +1,44 @@
-# RescueTime agent plugin
+# RescueTime plugin for Claude
 
-This package connects Codex or Claude Code to RescueTime's remote MCP server. It adds guidance for interpreting tracked-time data and for explicitly requested control of focus sessions and timers. Connecting a client session requires RescueTime sign-in (OAuth) or an MCP API key; API keys provide read-only access. RescueTime reference documentation is public data available to any authenticated connection.
+Connect Claude to RescueTime so it can analyze tracked activity, project and task time, productivity patterns, and work-life balance. Claude can also check your current focus state and, when you explicitly ask, start or stop RescueTime focus sessions and timers.
 
-## Directory listing content
+For Claude on the web or desktop, install the [RescueTime connector from the Claude directory](https://claude.ai/directory/www-rescuetime-com). The plugin below adds the same production connection plus RescueTime-specific guidance to Claude Code.
 
-Canonical copy for the plugin directory forms (Claude directory, ChatGPT plugin directory).
-Paste from here so every listing stays consistent.
+## Install from the Claude plugin marketplace
 
-### Description
-
-> RescueTime is a time management and project tracking tool that helps you optimize your
-> days and measure your results. It offers attention management features, day planning
-> automations, and rich reporting. Connecting to an agent extends those automations across
-> your whole work environment and grounds your project status reports, work-life balance
-> check-ins, and productivity patterns in real tracked data.
-
-### Example use cases
-
-> Start a 45-minute focus session so I can finish this proposal without distractions.
->
-> Build a summary of where my time went this week, broken down by project and category, and compare it with last week.
->
-> Look at my last three weeks of tracked time and recommend specific changes to improve my work-life balance.
->
-> Draft a status update for my client project from the time I logged against it this month.
-
-## Install from a checkout
-
-Replace `/path/to/rescuetime` with the repository root.
-
-### Codex
+Add this repository as a marketplace, then install the RescueTime plugin:
 
 ```sh
-codex plugin marketplace add /path/to/rescuetime
-codex plugin add rescuetime@personal
-```
-
-Restart Codex after installation. On the first user-data request, complete the RescueTime sign-in and consent flow opened by the client.
-
-Start a new Codex session after changing or reinstalling the plugin so updated skills and tools are loaded.
-
-### Claude Code
-
-```sh
-claude plugin marketplace add /path/to/rescuetime
+claude plugin marketplace add RescueTime/rescuetime-claude-plugin
 claude plugin install rescuetime@rescuetime
 ```
 
-Restart Claude Code after installation. Use `/mcp` if Claude asks you to complete authentication before the first user-data request.
+Restart Claude Code after installation. Use `/mcp` if Claude asks you to complete RescueTime authentication before the first request involving your data.
 
-For direct development loading without installing:
+For direct development loading, clone this repository and run:
 
 ```sh
-claude --plugin-dir /path/to/rescuetime/plugins/rescuetime
+claude --plugin-dir /path/to/rescuetime-claude-plugin
 ```
 
 Run `/reload-plugins` after local edits.
 
-## MCP endpoint
+## Example prompts
 
-The packaged plugin continues to connect to the production endpoint:
+- Review last week's time by activity and project, then suggest balanced time blocks for this week.
+- Draft a client-ready status update from my project time this month.
+- Start a 30-minute focus session named Q3 Analysis.
+
+## Connection and permissions
+
+The plugin connects only to RescueTime's production MCP endpoint:
 
 ```text
 https://www.rescuetime.com/mcp
 ```
 
-The same endpoint can be used by any Streamable HTTP MCP client. For Claude on web or desktop, install the published [RescueTime connector from the Claude directory](https://claude.ai/directory/www-rescuetime-com) instead of adding the URL manually. For ChatGPT, install the published [RescueTime plugin from the ChatGPT plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6a9051cd5014819188709e4adad2839e). See the [RescueTime MCP guide](https://www.rescuetime.com/mcp-guide) for setup, permissions, limits, and example workflows.
+Connecting requires RescueTime sign-in. Reading tracked time and focus state is separate from the additional permission used to start or stop focus sessions and timers. Write actions should occur only after an explicit request.
+
+For setup details, data limits, permissions, and troubleshooting, see the [RescueTime MCP guide](https://www.rescuetime.com/mcp-guide). RescueTime's [privacy policy](https://www.rescuetime.com/privacy), [terms of service](https://www.rescuetime.com/tos), and [help center](https://help.rescuetime.com/) are also available online.
+
+ChatGPT users can install the [RescueTime plugin from the ChatGPT plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6a9051cd5014819188709e4adad2839e).
