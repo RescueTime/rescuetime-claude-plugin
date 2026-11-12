@@ -1,8 +1,8 @@
 {
   "name": "rescuetime",
-  "version": "0.3.1",
+  "version": "0.5.0",
   "displayName": "RescueTime",
-  "description": "Analyze tracked time, project work, productivity patterns, and explicitly requested focus sessions.",
+  "description": "Analyze tracked time, project work, timesheets for you or your managed teams, and productivity patterns, and on request control focus sessions or categorize activities.",
   "author": {
     "name": "RescueTime",
     "url": "https://www.rescuetime.com/"
